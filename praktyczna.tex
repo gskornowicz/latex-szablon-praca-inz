@@ -1,0 +1,34 @@
+\chapter{Część praktyczna}
+
+\section{}
+
+\subsection{}
+
+Do listingów też można zrobić odniesienie np poniżej mamy listing nr \ref{listing:przykladowy}
+
+%zmiana nazwy listingów
+\renewcommand{\lstlistingname}{Listing}
+
+\begin{lstlisting}[caption=Przykładowy listing pliku konfiguracyjnego , label=listing:przykladowy]
+<Extension _syslog>
+ Module xm_gelf
+</Extension>
+
+<Input in>
+ Module	im_msvistalog
+</Input>
+
+<Output out>
+ Module      om_udp
+ Host        192.168.21.211
+ Port        12201
+ OutputType  GELF
+</Output>
+
+<Route 1>
+ Path        in => out
+</Route>
+\end{lstlisting}
+
+%czyści puste strony
+\let\cleardoublepage\clearpage

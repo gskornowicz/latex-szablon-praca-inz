@@ -1,0 +1,73 @@
+% załącznik nr 6
+% Made by Mateusz Cedro
+\addcontentsline{toc}{chapter}{Oświadczenie autorskie} % dodatkowy wpis do spisu treści
+
+\makeatletter
+\newgeometry{tmargin=3.3cm,bmargin=2.0cm,lmargin=2.0cm,rmargin=2.0cm,bindingoffset=1.0cm,nomarginpar,nohead}
+
+\begin{flushright}
+    Wrocław, dnia \@when
+  \end{flushright}
+
+  \begin{flushleft}
+    {\fontsize{14}{14} \selectfont
+    
+    \vspace*{20pt}
+    {\bf Wydział Informatyki, Administracji i Fizjoterapii}
+    
+    \bigskip
+    Kierunek studiów: {\bf informatyka (INF)}
+    }  
+  \vspace*{30pt}
+  
+  {~\@author} % autor pracy
+  \vspace*{-4pt}
+  
+  \makebox[220pt][r]{\dotfill} %zastępuję dotline
+
+  \vspace*{-2pt}
+  {\scriptsize (imię i nazwisko studenta)}
+
+  \bigskip
+  {~\@album} %nr indeksu
+  
+  \vspace*{-4pt}
+  \makebox[220pt][r]{\dotfill} %zastępuję dotline
+  
+  \vspace*{-2pt}
+  {\scriptsize (nr albumu)}
+\end{flushleft}
+
+  \bigskip
+
+\begin{center}
+  {\fontsize{16}{16} \selectfont \bf OŚWIADCZENIE AUTORSKIE}
+\end{center}
+
+\bigskip
+
+
+    Oświadczam, że niniejszą pracę dyplomową pod tytułem:
+    \begin{center}
+        {\fontsize{16}{16} \selectfont \bf \@title}
+    \end{center}
+    napisałem/am samodzielnie. Nie korzystałem/am z pomocy osób trzecich, jak również nie dokonałem/am zapożyczeń z innych prac.
+    \newline
+    \newline
+    \indent Wszystkie fragmenty pracy takie jak cytaty, ryciny, tabele, programy itp., które nie są mojego autorstwa, zostały odpowiednio zaznaczone i zamieszczono w pracy źródła ich pochodzenia. Treść wydrukowanej pracy dyplomowej jest identyczna z wersją pracy zapisaną na przekazywanym nośniku elektronicznym.
+    \newline
+    \newline
+    \indent Jednocześnie przyjmuję do wiadomości, że jeżeli w przypadku postępowania wyjaśniającego zebrany materiał potwierdzi popełnienie przeze mnie plagiatu, skutkować to będzie niedopuszczeniem do dalszych czynności w sprawie nadania mi tytułu zawodowego do czasu wydania orzeczenia przez komisję dyscyplinarną oraz złożenie zawiadomienia o popełnieniu przestępstwa.
+
+\bigskip
+
+\vspace*{30pt}
+\begin{flushright} % wyrownanie do prawej
+    \makebox[150pt]{\dotfill} % wypełniamy kropkami box
+  
+  \vspace*{-2pt}
+  \makebox[150pt]{\scriptsize (podpis studenta)} % nowy box z podpisem
+\end{flushright}
+
+\restoregeometry
+\makeatother

@@ -1,0 +1,74 @@
+% załącznik nr 5
+% Made by Mateusz Cedro
+
+\addcontentsline{toc}{chapter}{Oświadczenie o udostępnianiu pracy dyplomowej} % dodanie do spisu treści
+
+\makeatletter
+\newgeometry{tmargin=3.3cm,bmargin=2.0cm,lmargin=2.0cm,rmargin=2.0cm,bindingoffset=1.0cm,nomarginpar,nohead}
+
+\begin{flushright}
+    Wrocław, dnia \@when
+  \end{flushright}
+
+  \begin{flushleft}
+    {\fontsize{14}{14} \selectfont
+    
+    \vspace*{20pt}
+    {\bf Wydział Informatyki, Administracji i Fizjoterapii}
+    
+    \bigskip
+    Kierunek studiów: {\bf informatyka (INF)}
+    }  
+  \vspace*{30pt}
+  
+  {~\@author} % autor pracy
+  \vspace*{-4pt}
+  
+  \makebox[220pt][r]{\dotfill} %zastępuję dotline
+
+  \vspace*{-2pt}
+  {\scriptsize (imię i nazwisko studenta)}
+
+  \bigskip
+  {~\@album} %nr indeksu
+  
+  \vspace*{-4pt}
+  \makebox[220pt][r]{\dotfill} %zastępuję dotline
+  
+  \vspace*{-2pt}
+  {\scriptsize (nr albumu)}
+\end{flushleft}
+
+  \bigskip
+
+\begin{center}
+  {\fontsize{16}{16} \selectfont \bf OŚWIADCZENIE O UDOSTĘPNIANIU PRACY DYPLOMOWEJ}
+\end{center}
+
+\bigskip
+
+\begin{flushright} %parbox potrafi dzielić linie. Mbox - nie.
+    \vspace*{-4pt}
+    \parbox{350pt}{
+        Tytuł pracy dyplomowej: ~\@title
+      }
+\end{flushright}
+
+\bigskip
+
+\begin{flushright}
+  Wyrażam zgodę (nie wyrażam zgody)\footnote{Niepotrzebne skreślić.} na udostępnianie mojej pracy dyplomowej.
+\end{flushright}
+
+\bigskip
+
+\vspace*{30pt}
+\begin{flushright} % wyrownanie do prawej
+    \makebox[150pt]{\dotfill} % wypełniamy kropkami box
+  
+  \vspace*{-2pt}
+  \makebox[150pt]{\scriptsize (podpis studenta)} % nowy box z podpisem
+\end{flushright}
+
+\restoregeometry
+\makeatother

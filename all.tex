@@ -1,0 +1,112 @@
+\documentclass[12pt]{bsc}
+
+\usepackage[T1,MeX]{polski}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{txfonts}
+
+\usepackage{graphicx}
+\usepackage{fancyvrb}
+\usepackage{pdfpages}
+
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{caption}
+
+\usepackage{alltt}
+
+%sposob na zablokowanie obrazka na stronie
+%\FloatBarrier (wcześniej dołącz \usepackage{placeins})
+\usepackage{placeins}
+
+
+%caption listingów
+\DeclareCaptionFont{black}{ \color{black} }
+\DeclareCaptionFormat{listing}{
+  {
+    \parbox{\textwidth}{\hspace{12pt}#1#2#3}
+  }
+}
+\captionsetup[lstlisting]{ format=listing, labelfont=black, textfont=black, singlelinecheck=false, margin=0pt, font={bf,footnotesize} }
+
+%definicja custom listingów
+\lstdefinestyle{custom}{
+  breaklines=true,
+  xleftmargin=\parindent,
+  showstringspaces=false,
+  basicstyle=\fontsize{10}{11}\selectfont,
+}
+
+%pozwala na używanie znaku dolara($) w listingach
+\lstset{
+    mathescape=false
+}
+
+\usepackage[pdftex,pdfstartview=FitH,unicode]{hyperref}
+% "klikalny" spis treści
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+%https://tex.stackexchange.com/questions/36880/insert-a-blank-page-after-current-page
+\usepackage{afterpage}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+    
+
+
+\graphicspath{{./img/}}
+
+\selecthyphenation{polish}
+
+
+% ********* documents meta data **********
+\makeatletter
+
+\def\@title{Tytuł pracy inżynierskiej}
+\def\@engTitle{English title of your engineers work}
+\def\@author{Jan Kowalski}
+\def\@promoter{Dr inż. Alfred Kowalski}
+\def\@when{2019-01-28}
+\def\@year{2019}
+\def\@album{9999}
+
+\makeatother
+
+\renewcommand{\partname}{}
+
+\begin{document}
+  \include{front}
+  \tableofcontents
+  
+  \include{wstep}
+  
+  \part{Część przeglądowa}  
+  \include{przegladowa}
+
+  \part{Część praktyczna}
+  \include{praktyczna}
+  
+  \include{podsumowanie}
+
+  \pagestyle{plain}
+  \include{bibliografia}
+  
+  \include{spis}
+
+  \include{zawartosc_cd}
+  
+  \include{dodatki}
+  
+  \include{Oswiadczenie_udostepnienie}
+  
+  \include{Oswiadczenie_autorskie}
+\end{document}
